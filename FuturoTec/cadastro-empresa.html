@@ -20,7 +20,13 @@
     </head>
 <body>
     <div class="app">
-        <header class="header">...</header>
+        <header class="header">
+            <div class="container">
+                <div class="nav-wrapper">
+                 <div class="logo"> 
+                <img src="img/FuturoTecInicial.jpeg" alt="FuturoTEC Logo" style="width: 90px; vertical-align: middle; margin-right: 60px;"/>
+        </div> 
+        </header>
         <main class="auth-section">
             <div class="auth-card">
                 <h2 class="auth-title">Cadastro</h2>
@@ -49,38 +55,11 @@
                         <input type="password" id="confirmar-senha-empresa" name="confirmar-senha" placeholder="Confirme sua senha:" required>
                         <span class="password-toggle" data-target="confirmar-senha-empresa"><i data-feather="eye"></i></span>
                     </div>
-
-<div id="form-error-message" class="error-message"></div>
-
                     <button type="submit" class="submit-btn">Criar Conta</button>
                     <p class="login-link">Já possui uma conta? <a href="login-empresa.html">Fazer Login</a></p>
                 </form>
             </div>
         </main>
-
-          <script src="https://unpkg.com/feather-icons"></script>
-        <script> feather.replace(); </script>
-
-        <script>
-            const passwordToggles = document.querySelectorAll('.password-toggle');
-
-            passwordToggles.forEach(toggle => {
-                toggle.addEventListener('click', function () {
-                    const targetId = this.getAttribute('data-target');
-                    const passwordInput = document.getElementById(targetId);
-                    const icon = this.querySelector('i');
-
-                    if (passwordInput.type === 'password') {
-                        passwordInput.type = 'text';
-                        icon.setAttribute('data-feather', 'eye-off');
-                    } else {
-                        passwordInput.type = 'password';
-                        icon.setAttribute('data-feather', 'eye');
-                    }
-                    feather.replace();
-                });
-            });
-        </script>
         <footer>...</footer>
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
